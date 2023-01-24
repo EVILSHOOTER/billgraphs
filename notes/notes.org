@@ -1,0 +1,13 @@
+#+TITLE: billgraphs - notes
+
+
+
+
+* process
+- read an excel document
+  - should have columns+rows starting in same pos (e.g. 1,1).
+  - columns should be ordered consistently (e.g. names, then DOB. not other way)
+- convert data to python data
+  - make table of variable data types? array of arrays?
+  - or use an existing python module for making tables?
+- 
