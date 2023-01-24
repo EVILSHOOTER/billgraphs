@@ -1,7 +1,14 @@
 #+TITLE: billgraphs - notes
 
 
-
+* format
+- all written in OOP format
+- each script will have its own set of functionality, a reusable module
+  - excelParser (reads Excel doc and returns data)
+  - graphRenderer (given data, parameters, and returns a drawn diagram)
+  - renderViewer (view the final saved image)
+  - controller (UI to control these scripts. preferably in order of a process)
+  - main (run this first. 
 
 * process
 - read an excel document
