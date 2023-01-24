@@ -8,7 +8,7 @@
   - graphRenderer (given data, parameters, and returns a drawn diagram)
   - renderViewer (view the final saved image)
   - controller (UI to control these scripts. preferably in order of a process)
-  - main (run this first. 
+  - main (run this first. installs dependencies, if any, then runs rest)
 
 * process
 - read an excel document
@@ -18,3 +18,11 @@
   - make table of variable data types? array of arrays?
   - or use an existing python module for making tables?
 - 
+
+
+* requirements.txt
+[[https://stackoverflow.com/questions/43828879/simple-dependency-management-for-a-python-project][how to create requirements.txt]]
+
+* how to write a README.md
+[[https://raw.githubusercontent.com/damnever/pigar/main/README.md][pigar's github]]
+[[https://raw.githubusercontent.com/damnever/pigar/main/README.md][raw date of README.md for pigar's github]]

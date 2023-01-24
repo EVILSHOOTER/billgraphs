@@ -1,14 +1,22 @@
-# import some classes?
 # from Server.BaseServer import Server for subclasses
+import pandas as pd
+
 
 class ExcelParser:
-    def __init__(self, daVar):
-        self.var = daVar
-        print("hello world")
+    # constructor. so object can just exist, then you insert values easily.
+    def __init__(self):
+        self.dataFrame = None
 
-    def func(self, param1):
-        print("func been d0ne: " + self.var)
+    
+    def pickFile(self, fileLocation):
+        # error checking?
+        self.dataFrame = pd.read_excel(fileLocation)
+
+    def printFile(self):
+        print(self.dataFrame)
 
 # anything y000 p00t here is more or less for testing this crap out
-ep = ExcelParser("h0l4 m1 4m1g0")
-ep.func("y0")
+ep = ExcelParser()
+ep.pickFile("C:\Users\deck\Documents\Git\GitProjects\billgraphs\data\For_aduquaas.xlsx")
+ep.printFile()
+
