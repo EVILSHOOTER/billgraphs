@@ -17,6 +17,6 @@ class ExcelParser:
 
 # anything y000 p00t here is more or less for testing this crap out
 ep = ExcelParser()
-ep.pickFile("C:\Users\deck\Documents\Git\GitProjects\billgraphs\data\For_aduquaas.xlsx")
-ep.printFile()
+#ep.pickFile("C:\Users\deck\Documents\Git\GitProjects\billgraphs\data\For_aduquaas.xlsx")
+#ep.printFile()
 

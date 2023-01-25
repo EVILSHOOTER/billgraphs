@@ -1,2 +1,28 @@
-#+TITLE= bill stuff
+#+TITLE: billgraphs - notes
 
+
+* format
+- all written in OOP format
+- each script will have its own set of functionality, a reusable module
+  - excelParser (reads Excel doc and returns data)
+  - graphRenderer (given data, parameters, and returns a drawn diagram)
+  - renderViewer (view the final saved image)
+  - controller (UI to control these scripts. preferably in order of a process)
+  - main (run this first. installs dependencies, if any, then runs rest)
+
+* process
+- read an excel document
+  - should have columns+rows starting in same pos (e.g. 1,1).
+  - columns should be ordered consistently (e.g. names, then DOB. not other way)
+- convert data to python data
+  - make table of variable data types? array of arrays?
+  - or use an existing python module for making tables?
+- 
+
+
+* requirements.txt
+[[https://stackoverflow.com/questions/43828879/simple-dependency-management-for-a-python-project][how to create requirements.txt]]
+
+* how to write a README.md
+[[https://raw.githubusercontent.com/damnever/pigar/main/README.md][pigar's github]]
+[[https://raw.githubusercontent.com/damnever/pigar/main/README.md][raw date of README.md for pigar's github]]
