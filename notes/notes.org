@@ -43,4 +43,3 @@ py -m pipreqs.pipreqs
 ** suggestions
 - Nuitka - compile Py to C source code. straight up. incl. modules!
   - [[https://www.youtube.com/watch?v=JiXGo_sgsH8][good vid demo]]
-
