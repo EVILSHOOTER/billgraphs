@@ -37,3 +37,10 @@ others have got this god-forsaken issue but here we are.
 ** the fix
 run this to get pipreqs to actually run for real.
 py -m pipreqs.pipreqs
+
+* python compilers
+[[https://stackoverflow.com/questions/5458048/how-can-i-make-a-python-script-standalone-executable-to-run-without-any-dependen][great stackoverflow answers]]
+** suggestions
+- Nuitka - compile Py to C source code. straight up. incl. modules!
+  - [[https://www.youtube.com/watch?v=JiXGo_sgsH8][good vid demo]]
+
