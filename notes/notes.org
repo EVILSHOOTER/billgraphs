@@ -52,9 +52,13 @@ py -m pipreqs.pipreqs
 
 * setup help
 ** getting python to run in emacs
-- get your emacs config from github
+- get your emacs config from github. it has all the code you require
+  to initialise this python thing you want.
 - pip install 'python-lsp-server[all]
 - search for "Manage app execution aliases". switch Off all Python ones
+** controls
+- C-c C-p - run-python
+- C-c C-l - run script
 
 * package y000 goj y000z
 - nuitka - compilation
