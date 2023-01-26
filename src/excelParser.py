@@ -1,27 +1,32 @@
-# from Server.BaseServer import Server for subclasses
-#import pandas as pd
-#import openpyxl
-import xlwings as xw
+import xlwings as xw  # use to read specific columns? can it read all found?
+"""For use in excel parsing."""
+
 
 class ExcelParser:
+    """Parse .XLSX files into data usable by the other classes."""
+
     # constructor. so object can just exist, then you insert values easily.
     def __init__(self):
+        """Create ExcelParser object. Controlling the object is separate."""
         self.sheet = ""
 
     def pickFile(self, fileLocation):
+        """Select a file using xlwings or whatever."""
         # error checking?
-        sheet = xw.Book(fileLocation).sheets["Sheet1"]
+        self.sheet = xw.Book(fileLocation).sheets["Sheet1"]
 
     def requireColumns(self, c1, c2):
+        """Another docstring."""
         pass
 
     def printFile(self):
-        r = sheet.range("A1:A25").value
-        c = sheet.range("F5").value
-        print(r)
+        """Aight so this is an example docstring."""
+        r = self.sheet.range("A1:A25").value
+        c = self.sheet.range("F5").value
+        print(r, c)
+
 
 # anything y000 p00t here is more or less for testing this crap out
 ep = ExcelParser()
 ep.pickFile(r"..\data\For_aduquaas.xlsx")
 ep.printFile()
-

@@ -19,10 +19,40 @@
   - or use an existing python module for making tables?
 - 
 
-
-* requirements.txt
+* general troubleshooting
+** requirements.txt
 [[https://stackoverflow.com/questions/43828879/simple-dependency-management-for-a-python-project][how to create requirements.txt]]
 
-* how to write a README.md
+** how to write a README.md
 [[https://raw.githubusercontent.com/damnever/pigar/main/README.md][pigar's github]]
 [[https://raw.githubusercontent.com/damnever/pigar/main/README.md][raw date of README.md for pigar's github]]
+
+** trouble shooting why the F@Q I can't run any goddamn pip module!
+[[https://www.google.com/search?q=python+pipreqs+is+not+a+recognized+command&sxsrf=AJOqlzUbKO4i3JggdRyMZGf_kEOIHeEj3w%3A1674615899151&ei=W5zQY4nxCJH_gAbnwo-ABg&ved=0ahUKEwjJireu3uH8AhWRP8AKHWfhA2AQ4dUDCA8&uact=5&oq=python+pipreqs+is+not+a+recognized+command&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQogQyBQgAEKIEMgUIABCiBDIFCAAQogQyBQgAEKIEOgoIABBHENYEELADOgQIIxAnOgcIIxCwAhAnOgoIIRCgARDDBBAKSgQIQRgASgQIRhgAUK8GWL8OYKgPaAJwAXgAgAFpiAHPBJIBAzYuMZgBAKABAcgBCMABAQ&sclient=gws-wiz-serp][g00g13 search results]]
+[[https://stackoverflow.com/questions/66641323/no-module-named-pipreqs-main-pipreqs-is-a-package-and-cannot-be-directly][stackoverflow - no module named pipreqs...]]
+*** TODO the reason
+okay. because pipreqs does NOT have a __main__.py module, it cannot be
+nicely run as a pip module. it has a __init__.py instead. idk y so few
+others have got this god-forsaken issue but here we are.
+*** TODO the fix
+run this to get pipreqs to actually run for real.
+py -m pipreqs.pipreqs
+
+** python compilers
+[[https://stackoverflow.com/questions/5458048/how-can-i-make-a-python-script-standalone-executable-to-run-without-any-dependen][great stackoverflow answers]]
+*** suggestions
+- Nuitka - compile Py to C source code. straight up. incl. modules!
+  - [[https://www.youtube.com/watch?v=JiXGo_sgsH8][good vid demo]]
+
+    
+* scripting help
+** read excel sheets
+[[https://www.geeksforgeeks.org/reading-excel-file-using-python/][geeks4geeks helpful article]]
+
+
+* package y000 goj y000z
+- nuitka - compilation
+- pipreqs - create requirements.txt
+- xlwings + pywin32
+  - this requires Excel to actually be installed on the system. won't
+    work otherwise.

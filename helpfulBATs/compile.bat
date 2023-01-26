@@ -1,1 +1,0 @@
-py -m nuitka ../src --standalone --output-dir=../dist --python-flag=-O

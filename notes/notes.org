@@ -49,3 +49,16 @@ py -m pipreqs.pipreqs
 ** read excel sheets
 [[https://www.geeksforgeeks.org/reading-excel-file-using-python/][geeks4geeks helpful article]]
 
+
+* setup help
+** getting python to run in emacs
+- get your emacs config from github
+- pip install 'python-lsp-server[all]
+- search for "Manage app execution aliases". switch Off all Python ones
+
+* package y000 goj y000z
+- nuitka - compilation
+- pipreqs - create requirements.txt
+- xlwings + pywin32
+  - this requires Excel to actually be installed on the system. won't
+    work otherwise.
