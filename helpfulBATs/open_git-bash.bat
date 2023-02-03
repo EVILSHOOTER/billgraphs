@@ -1,1 +1,3 @@
-"..\..\..\git-bash.exe" --cd=..\
+:: "..\..\..\git-bash.exe" --cd=..\
+
+"C:\Program Files\Git\git-bash.exe" --cd=..\

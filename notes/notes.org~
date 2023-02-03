@@ -7,8 +7,10 @@
   - excelParser (reads Excel doc and returns data)
   - graphRenderer (given data, parameters, and returns a drawn diagram)
   - renderViewer (view the final saved image)
-  - controller (UI to control these scripts. preferably in order of a process)
-  - main (run this first. installs dependencies, if any, then runs rest)
+  - controller (UI to control these scripts. preferably in order of a
+    process)
+  - main (run this first. installs dependencies, if any, then runs
+    rest)
 
 * process
 - read an excel document
@@ -44,11 +46,18 @@ py -m pipreqs.pipreqs
 - Nuitka - compile Py to C source code. straight up. incl. modules!
   - [[https://www.youtube.com/watch?v=JiXGo_sgsH8][good vid demo]]
 
-    
+* setup help
+** getting python to run in emacs
+- get your emacs config from github. it has all the code you require
+  to initialise this python thing you want.
+- pip install 'python-lsp-server[all]
+- search for "Manage app execution aliases". switch Off all Python ones
+** controls
+- C-c C-p - run-python
+- C-c C-l - run script
 * scripting help
 ** read excel sheets
 [[https://www.geeksforgeeks.org/reading-excel-file-using-python/][geeks4geeks helpful article]]
-
 
 * package y000 goj y000z
 - nuitka - compilation
@@ -56,3 +65,5 @@ py -m pipreqs.pipreqs
 - xlwings + pywin32
   - this requires Excel to actually be installed on the system. won't
     work otherwise.
+- pandas?
+- 

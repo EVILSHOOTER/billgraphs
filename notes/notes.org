@@ -1,19 +1,21 @@
 #+TITLE: billgraphs - notes
 
-
 * format
 - all written in OOP format
 - each script will have its own set of functionality, a reusable module
   - excelParser (reads Excel doc and returns data)
   - graphRenderer (given data, parameters, and returns a drawn diagram)
   - renderViewer (view the final saved image)
-  - controller (UI to control these scripts. preferably in order of a process)
-  - main (run this first. installs dependencies, if any, then runs rest)
+  - controller (UI to control these scripts. preferably in order of a
+    process)
+  - main (run this first. installs dependencies, if any, then runs
+    rest)
 
 * process
 - read an excel document
   - should have columns+rows starting in same pos (e.g. 1,1).
-  - columns should be ordered consistently (e.g. names, then DOB. not other way)
+  - columns should be ordered consistently (e.g. names, then DOB. not
+    other way)
 - convert data to python data
   - make table of variable data types? array of arrays?
   - or use an existing python module for making tables?
@@ -44,12 +46,6 @@ py -m pipreqs.pipreqs
 - Nuitka - compile Py to C source code. straight up. incl. modules!
   - [[https://www.youtube.com/watch?v=JiXGo_sgsH8][good vid demo]]
 
-    
-* scripting help
-** read excel sheets
-[[https://www.geeksforgeeks.org/reading-excel-file-using-python/][geeks4geeks helpful article]]
-
-
 * setup help
 ** getting python to run in emacs
 - get your emacs config from github. it has all the code you require
@@ -59,10 +55,13 @@ py -m pipreqs.pipreqs
 ** controls
 - C-c C-p - run-python
 - C-c C-l - run script
+* scripting help
+** read excel sheets
+[[https://www.geeksforgeeks.org/reading-excel-file-using-python/][geeks4geeks helpful article]]
 
 * package y000 goj y000z
 - nuitka - compilation
 - pipreqs - create requirements.txt
-- xlwings + pywin32
-  - this requires Excel to actually be installed on the system. won't
-    work otherwise.
+- (requires Excel install) xlwings + pywin32
+- pandas?
+- 
