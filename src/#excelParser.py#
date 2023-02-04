@@ -2,7 +2,6 @@
 
 # import xlwings as xw  # use to read specific columns? can it read all found?
 import pandas as pd
-import numpy
 
 
 class ExcelParser:
@@ -52,7 +51,7 @@ class ExcelParser:
         """Convert table into a more usable form for graphs."""
         self.table = self.sheet  # and then we edit this
 
-        (self.sheet - pd.Timestamp("1970-01-01")) // pd.Timedelta("1s")
+        self.sheet - pd.Timestaml
         
         for index, row in self.table.iterrows():
             for colIndex, column in enumerate(row):  # enumarate gives da index too

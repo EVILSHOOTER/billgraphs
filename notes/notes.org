@@ -55,13 +55,27 @@ py -m pipreqs.pipreqs
 ** controls
 - C-c C-p - run-python
 - C-c C-l - run script
-* scripting help
-** read excel sheets
-[[https://www.geeksforgeeks.org/reading-excel-file-using-python/][geeks4geeks helpful article]]
-
 * package y000 goj y000z
 - nuitka - compilation
 - pipreqs - create requirements.txt
 - (requires Excel install) xlwings + pywin32
 - pandas?
-- 
+-
+* BILL excel notes (in that one example he sent)
+So @Aqdas
+M=square
+F= Circle
+MD or FD means deceased, so square or circle with a diagonal line through it
+Y values come down from the top of the page, X values are as normal
+* scripting notes
+** read excel sheets
+[[https://www.geeksforgeeks.org/reading-excel-file-using-python/][geeks4geeks helpful article]]
+[[https://www.activestate.com/resources/quick-reads/how-to-access-a-row-in-a-dataframe/][how to use rows in Dataframes]]
+cuz once u read the excel sheet, now u can work on it as a DataFrame, so u g
+
+aight can I use sheet.iloc[n] to actually get individual data of columns
+
+columns of different datatype are given different datatypes in python.
+- strings are your regular "str"
+- numbers = numpy.float64
+- dates = pandas._libs.tslibs.timestamps.Timestamp
