@@ -11,7 +11,7 @@
 	- click the green button that looks like "<> Code v" and click "Download ZIP"
 	- unzip the files to wherever
 - Install dependencies
-	- ugfuyhgh cba rn, ill explain this l8r
+	- will lay out eventually
 - Run the program
 	- run `main.py`.
                           
