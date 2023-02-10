@@ -15,4 +15,4 @@
 - Run the program
 	- run `main.py`.
                           
-tf can i not just make an executable via somethin like pyinstaller or wat
+will make an executable using Nuitka for ease of use
