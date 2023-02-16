@@ -7,8 +7,7 @@ from datetime import date
 
 class ExcelParser:
     """Parses .XLSX files for data to be used by the other classes."""
-
-    # constructor. so object can just exist, then you insert values easily.
+    
     def __init__(self):
         """Create ExcelParser object. Controlling the object is separate."""
         self.OGtable = None  # the OG table without edits
@@ -18,11 +17,11 @@ class ExcelParser:
         """Select an Excel file. May use Pandas or Excel, idrk as of yet."""
         self.OGtable = pd.read_excel(fileLocation)
 
-    def printFile(self):
+    def printOGtable(self):
         """Print the entire doc. usually useless."""
         print(self.OGtable)  # whole sheet
 
-    def printTable(self):
+    def printNEWtable(self):
         """Print the entire table. Mostly for testing purposes."""
         print(self.NEWtable)  # whole sheet
 
@@ -65,7 +64,7 @@ ep = ExcelParser()
 ep.pickFile(r"..\data\For_aduquaas.xlsx")
 # ep.row(0, "Date of Birthe")
 ep.convertTable()
-ep.printTable()
+ep.printNEWtable()
 
 
 # program aint gon catch all the errors but who cares

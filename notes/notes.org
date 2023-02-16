@@ -12,7 +12,7 @@ columns of different datatype are given different datatypes in python.
 - numbers = numpy.float64
 - dates = pandas._libs.tslibs.timestamps.Timestamp
 
-convertTable:
+** convertTable:
 - create new dataframe
 - read old datasheet, column by column
 - detect the datatype of the column and convert accordingly
@@ -22,7 +22,20 @@ convertTable:
   - e.g. if values are dateTime OR actually if column name = "DOB"
     - (actually, we need to know how the dates have been written)
   - convert atomically (YES I REMEMBERED THE DAMN TERM!!!!)
-  
+
+
+graphRenderer:
+- read from ExcelParser object (have a return file object? or just get
+  the variable from it like a DIRTY person)
+- do a test render?
+
+potential rendering libraries:
+- pycairo (0lD AF )
+- opengl??
+- pillow? nah that's just for image manipulation
+- pyglet
+- pygame looks aight
+
 * format
 - all written in OOP format
 - each script will have its own set of functionality, a reusable module
