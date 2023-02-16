@@ -2,6 +2,7 @@
 
 # import xlwings as xw  # use to read specific columns? can it read all found?
 import pandas as pd
+from datetime import date
 
 
 class ExcelParser:
@@ -10,24 +11,24 @@ class ExcelParser:
     # constructor. so object can just exist, then you insert values easily.
     def __init__(self):
         """Create ExcelParser object. Controlling the object is separate."""
-        self.sheet = None  # the OG table without edits
-        self.table = None  # this shall be the updated table for drawing from
+        self.OGtable = None  # the OG table without edits
+        self.NEWtable = None  # this shall be the updated table for drawing
 
     def pickFile(self, fileLocation):
         """Select an Excel file. May use Pandas or Excel, idrk as of yet."""
-        self.sheet = pd.read_excel(fileLocation)
+        self.OGtable = pd.read_excel(fileLocation)
 
     def printFile(self):
         """Print the entire doc. usually useless."""
-        print(self.sheet)  # whole sheet
+        print(self.OGtable)  # whole sheet
 
     def printTable(self):
         """Print the entire table. Mostly for testing purposes."""
-        print(self.table)  # whole sheet
+        print(self.NEWtable)  # whole sheet
 
     def row(self, row=None, column=None):
         """Read a row, optionally choose the specific column too."""
-        result = self.sheet.iloc[row]  # i-locate
+        result = self.NEWtable.iloc[row]  # i-locate
         if column is not None:
             if isinstance(column, str):
                 result = result.loc[column]  # by key
@@ -37,11 +38,11 @@ class ExcelParser:
 
     def rowLength(self):
         """Return no. of columns of table (headers excluded)."""
-        return self.sheet.index.stop
+        return self.OGtable.index.stop
 
     def columnLength(self):
         """Return no. of columns in table."""
-        return len(self.sheet.columns)
+        return len(self.OGtable.columns)
 
     def test(self):
         """Test."""
@@ -49,23 +50,22 @@ class ExcelParser:
 
     def convertTable(self):
         """Convert table into a more usable form for graphs."""
-        self.table = self.sheet  # and then we edit this
-
-        self.sheet - pd.Timestaml
-        
-        for index, row in self.table.iterrows():
-            for colIndex, column in enumerate(row):  # enumarate gives da index too
-                if isinstance(column, pd._libs.tslibs.timestamps.Timestamp):
-                    print("timestamp")
-                #print(colIndex)
-            print(row[1])  # can use key or number to index columns
+        self.NEWtable = self.OGtable
+        for columnName in self.NEWtable:
+            column = self.NEWtable[columnName]
+            # print(columnName + ": " + str(column.dtype))
+            if str(column.dtype) == "datetime64[ns]":  # convert d
+                d = date(1900, 1, 1)  # anchor date. nice to get Y-axis from.
+                self.NEWtable[columnName] = self.NEWtable[columnName].apply(
+                    lambda x: (x.date()-d).days)  # days since 1900
 
 
 # anything y000 p00t here is more or less for testing this crap out
 ep = ExcelParser()
 ep.pickFile(r"..\data\For_aduquaas.xlsx")
 # ep.row(0, "Date of Birthe")
-print(ep.convertTable())
+ep.convertTable()
+ep.printTable()
 
 
 # program aint gon catch all the errors but who cares

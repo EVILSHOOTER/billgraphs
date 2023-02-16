@@ -1,5 +1,28 @@
 #+TITLE: billgraphs - notes
 
+* scripting random notes blog thing
+[[https://www.geeksforgeeks.org/reading-excel-file-using-python/][geeks4geeks helpful article]]
+[[https://www.activestate.com/resources/quick-reads/how-to-access-a-row-in-a-dataframe/][how to use rows in Dataframes]]
+cuz once u read the excel sheet, now u can work on it as a DataFrame, so u g
+
+aight can I use sheet.iloc[n] to actually get individual data of columns
+
+columns of different datatype are given different datatypes in python.
+- strings are your regular "str"
+- numbers = numpy.float64
+- dates = pandas._libs.tslibs.timestamps.Timestamp
+
+convertTable:
+- create new dataframe
+- read old datasheet, column by column
+- detect the datatype of the column and convert accordingly
+  - if datatype is object...
+    - check first value of list?
+    - or ASSUME that it's a string?
+  - e.g. if values are dateTime OR actually if column name = "DOB"
+    - (actually, we need to know how the dates have been written)
+  - convert atomically (YES I REMEMBERED THE DAMN TERM!!!!)
+  
 * format
 - all written in OOP format
 - each script will have its own set of functionality, a reusable module
@@ -67,15 +90,3 @@ M=square
 F= Circle
 MD or FD means deceased, so square or circle with a diagonal line through it
 Y values come down from the top of the page, X values are as normal
-* scripting notes
-** read excel sheets
-[[https://www.geeksforgeeks.org/reading-excel-file-using-python/][geeks4geeks helpful article]]
-[[https://www.activestate.com/resources/quick-reads/how-to-access-a-row-in-a-dataframe/][how to use rows in Dataframes]]
-cuz once u read the excel sheet, now u can work on it as a DataFrame, so u g
-
-aight can I use sheet.iloc[n] to actually get individual data of columns
-
-columns of different datatype are given different datatypes in python.
-- strings are your regular "str"
-- numbers = numpy.float64
-- dates = pandas._libs.tslibs.timestamps.Timestamp
