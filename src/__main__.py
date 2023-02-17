@@ -6,6 +6,6 @@ from graphRenderer import GraphRenderer
 graph = GraphRenderer()
 excel = ExcelParser()
 
-excel.pickFile(r"..\data\For_aduquaas.xlsx")
+excel.pickFile(r"data\For_aduquaas.xlsx")
 excel.convertTable()
 excel.printNEWtable()
